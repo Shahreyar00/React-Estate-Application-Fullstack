@@ -19,10 +19,12 @@ const Login = () => {
         const password = formData.get("password");
 
         try {
-            await apiRequest.post("/auth/login", {
+            const res = await apiRequest.post("/auth/login", {
                 username,
                 password,
             });
+
+            localStorage.setItem("user", JSON.stringify(res.data));
 
             navigate("/");
         } catch (err) {

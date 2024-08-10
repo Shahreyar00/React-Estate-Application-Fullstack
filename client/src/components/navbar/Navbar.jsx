@@ -5,7 +5,7 @@ import "./navbar.scss";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
-    const user = false;
+    const user = true;
 
     return (
         <nav>
